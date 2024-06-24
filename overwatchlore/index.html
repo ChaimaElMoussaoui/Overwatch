@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/ow-logoo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>OW-dex</title>
+</head>
+
+<body class="achtergrond">
+
+    <div class="main-width">
+        <header>
+            <nav class="navbar navbar-expand-lg sticky-top overwatch-navbar">
+                <div class="container-fluid">
+                    <div class="navbar-logo">
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                data-bs-target="#logoDropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="img/ow-logo.png" alt="Logo" width="30" style="border-radius: 20%;">
+                                <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu" id="logoDropdown" aria-labelledby="logoDropdown">
+                                <a class="dropdown-item" href="#">Overwatch</a>
+                                <a class="dropdown-item" href="#">Overwatch 2</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <img src="img/blizz-logo.png" alt="Another Logo" width="30">
+                            <button type="button" class="btn-close" data-bs-diliss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2 " aria-current="page" href="index.html">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2 " href="heroes.html">Heroes</a>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2" href="#">Lore theories</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2" href="#">Updates</a>
+                                </li>
+                            </ul>
+                            <a class="btn btn-primary" style="width: 80px;"
+                                href="https://eu.shop.battle.net/en-us/product/overwatch?p=1007996"
+                                role="button">Play</a>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+            </nav>
+            <br><br>
+
+            <div class="container">
+            </div>
+
+
+            <div class="content">
+                <div class="main-text">
+                    <h2>Overwatch</h2>
+                    <h1>Explore your hero</h1>
+                    <p><strong>
+
+                            Join us as we venture into the rich lore of Overwatch, exploring the diverse
+                            backgrounds
+                            and motivations of it's iconic champions.
+                            Welcome to the world of Overwatch, where heroes are born and legends are
+                            made.</strong>
+                    </p>
+                </div>
+            </div>
+
+
+        </header>
+
+        <!---<div class="image">
+            <img src="group2.png" alt="img1">
+        </div>
+
+    --->
+
+        <br><br><br><br> 
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card border-primary bg-transparent">
+                        <div class="card-body">
+                            <h2 class="card-title" style="font-family: myFont; font-size: 50px; color: #05e6f2;">Heroes
+                                lore
+                            </h2>
+                            <p style="color: white;">In a world torn by strife, Overwatch emerges to protect
+                                    life!
+                                    With tales untold and
+                                    skills untamed, they fight for a world unchained.
+                                    From seeking redemption to relentless protection, these heroes rise, a united
+                                    collection.
+                                    In battles old and new, they stand true, for a future bright and overdue!
+                            </p>
+                            <a class="btn btn-primary" href="heroes.html" role="button">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 position-relative ">
+                    <video id="myVideo" poster="img/sigma.jpg" width="460" height="280" onplay="hidePlayButton()"
+                        onpause="showPlayButton()" onclick="togglePlayPause()">
+                        <source src="mp4/sigggy.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div id="playButton" class="play-button" onclick="togglePlayPause()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64"
+                            fill="#ffffff" class="play-icon">
+                            <path d="M8 5v14l11-7z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <br><br><br><br>
+
+
+        <div class="container">
+          
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-6">
+                    <div class="card border-primary bg-transparent">
+                        <div class="card-body text-center">
+                            <h2 class="card-title" style="color: #05e6f2; font-size: 50px; font-family: myFont;">Maps
+                            </h2>
+                            <p class="card-text" style="color: white;">Explore the thrilling world of Overwatch through
+                                our guides and analyses of its dynamic maps.
+                                Join us as we uncover the tactics and stories behind each battleground in this beloved
+                                multiplayer shooter.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-primary">
+                            <img src="img/Monte_Carlo.png" class="card-img" alt="map1">
+                            <div class="card-img-overlay">
+                                <h2 class="card-title" style="color: white; font-family: myFont;">Monte Carlo<img src="img/ow-icon.png" alt="ana" style="height: 1.5rem;"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-primary">
+                            <img src="img/Kanezaka.jpg" class="card-img" alt="map2">
+                            <div class="card-img-overlay">
+                                <h2 class="card-title" style="color: white; font-family: myFont;">Kanezaka<img src="img/ow-icon.png" alt="ana" style="height: 1.5rem;"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-primary">
+                            <img src="img/kingsrow.jpg" class="card-img" alt="map3">
+                            <div class="card-img-overlay">
+                                <h2 class="card-title" style="color: white; font-family: myFont;">Kings Row<img src="img/ow-icon.png" alt="ana" style="height: 1.5rem;"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-primary">
+                            <img src="img/New_Junk_City.jpg" class="card-img" alt="map4">
+                            <div class="card-img-overlay">
+                                <h2 class="card-title" style="color: white; font-family: myFont;">New-Junk City<img src="img/ow-icon.png" alt="ana" style="height: 1.5rem;"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-primary">
+                            <img src="img/Overwatch-2-Midtown.jpg" class="card-img" alt="map5">
+                            <div class="card-img-overlay">
+                                <h2 class="card-title" style="color: white; font-family: myFont;">Midtown<img src="img/ow-icon.png" alt="ana" style="height: 1.5rem;"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-primary">
+                            <img src="img/Overwatch-2-Colosseo.jpg" class="card-img" alt="map6">
+                            <div class="card-img-overlay">
+                                <h2 class="card-title" style="color: white; font-family: myFont;">Colosseo<img src="img/ow-icon.png" alt="ana" style="height: 1.5rem;"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br>
+    <h2 class="card-title text-center" style="color: #05e6f2; font-size: 50px; font-family: myFont;">Populair
+        Characters</h2>
+    <div class="container d-flex justify-content-center align-items-center ">
+
+        <div class="row">
+
+            <div class="col-xl-3 mb-3">
+                <div class="card border-primary" style="width: 16rem;">
+                    <img src="img/ana.jpeg" style="height: 15rem;" class="card-img" alt="char1">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-family: myFont;">Ana <img src="img/ana-icon.png" alt="ana" style="height: 2rem;"></h5>
+                        <p class="card-text">Meet Ana, Overwatch's sharpshooting
+                            support. With her biotic rifle,
+                            she heals allies and takes down enemies, crucial in battles.</p>
+                        <a href="#" class="btn btn-primary" style="font-family: myFont;">View</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 mb-3">
+                <div class="card border-primary" style="width: 16rem;">
+                    <img src="img/kiri.jpg" style="height: 15rem;" class="card-img" alt="char2">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-family: myFont;">Kiriko<img src="img/kiriko-icon.png" alt="ana" style="height: 2rem;"></h5>
+                        <p class="card-text">Meet Kiriko, she is a kunoichi healer who
+                            is aided by her kitsune
+                            spirit. She can throw protection suzu to her allies, or kunai against her enemies.</p>
+                        <a href="#" class="btn btn-primary" style="font-family: myFont;">View</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 mb-3">
+                <div class="card border-primary" style="width: 16rem;">
+                    <img src="img/mercy.jpg" style="height: 15rem;" class="card-img" alt="char3">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-family: myFont;">Mercy<img src="img/mercy-icon.png" alt="ana" style="height: 2rem;"></h5>
+                        <p class="card-text">Meet Mercy, Overwatch's angelic healer.
+                            Armed with the power
+                            to resurrect fallen allies, she stands as a beacon of hope and salvation.</p>
+                        <a href="#" class="btn btn-primary" style="font-family: myFont;">View</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 mb-3">
+                <div class="card border-primary" style="width: 16rem;">
+                    <img src="img/genij.jpg" style="height: 15rem;" class="card-img" alt="char4">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-family: myFont;">Genji<img src="img/genji-icon.png" alt="ana" style="height: 2rem;"></h5>
+                        <p class="card-text">Meet Genji, the agile ninja of Overwatch.
+                            Once a deadly assassin of the Shimada clan,
+                            striking down foes with his shurikens and katana.
+                        </p>
+                        <a href="#" class="btn btn-primary" style="font-family: myFont;">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+
+
+
+    <div class="container" style="text-align: center;">
+        <h2 class="list-title" style="color: #05e6f2;">News</h2>
+        <div id="formList">
+            <div id="list">
+                <div class="item">
+                    <img src="img/cowboy 2.jpg" class="avatar">
+                    <div class="content">
+                        <table width="100%" cellspacing="0">
+                            <tr>
+                                <td colspan="2" class="nameGroup">Overwatch x Cowboy bebop </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/season.jpg" class="avatar">
+                    <div class="content">
+                        <table width="100%" cellspacing="0">
+                            <tr>
+                                <td colspan="2" class="nameGroup">RISE AS A CHAMPION - SEASON 9 </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/crisis.jpg" class="avatar">
+                    <div class="content">
+                        <table width="100%" cellspacing="0">
+                            <tr>
+                                <td colspan="2" class="nameGroup">COlIC CRISIS </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/cosmic.jpg" class="avatar">
+                    <div class="content">
+                        <table width="100%" cellspacing="0">
+                            <tr>
+                                <td colspan="2" class="nameGroup">Latest Mythic Skin Has a Cool Secret Feature
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/champ.jpg" class="avatar">
+                    <div class="content">
+                        <table width="100%" cellspacing="0">
+                            <tr>
+                                <td colspan="2" class="nameGroup">Teases Season 10 Competitive Play Changes</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p class="mb-0">&copy; 2024 Your Website. All rights reserved.</p>
+                    <i class="bi- bi-instagram"></i>
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-youtube"></i>
+                    <i class="bi bi-facebook"></i>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="swiper.js"></script>
+
+
+    <script src="video.js"></script>
+
+
+</body>
+
+</html>
+
+
+<!--
+        In the turbulent world of Overwatch, heroes rise from the ashes of conflict, driven by a shared mission: to bring harmony to a fractured world.
+        From battle-scarred veterans to fresh-faced recruits, each hero brings their own unique story, woven with bravery, sacrifice, and redemption.
+   
+-->

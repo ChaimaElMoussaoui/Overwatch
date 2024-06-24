@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="heroes.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/ow-logoo.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>OW-dex</title>
+</head>
+
+<body class="achtergrond">
+
+    <div class="main-width">
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top overwatch-navbar">
+                <div class="container-fluid">
+                    <div class="navbar-logo">
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                data-bs-target="#logoDropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="img/ow-logo.png" alt="Logo" width="30" style="border-radius: 20%;">
+                                <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu" id="logoDropdown" aria-labelledby="logoDropdown">
+                                <a class="dropdown-item" href="#">Overwatch</a>
+                                <a class="dropdown-item" href="#">Overwatch 2</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <img src="img/blizz-logo.png" alt="Another Logo" width="30">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2 " aria-current="page" href="index.html">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2 " href="heroes.html">Heroes</a>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2" href="lore.html">Lore theories</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2" href="#">Updates</a>
+                                </li>
+                            </ul>
+                            <a class="btn btn-primary" style="width: 80px;"
+                                href="https://eu.shop.battle.net/en-us/product/overwatch?p=1007996"
+                                role="button">Play</a>
+
+
+                        </div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <br><br><br><br>
+
+        <input type="text" id="heroSearch" placeholder="Search heroes">
+
+        <div class="row  ">
+            <div class="col mb-3">
+                <div id="heroCards" class="hero-cards" style="width: 15rem; height: 20rem;">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+    <script src="heroes.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+</body>
+
+</html>
