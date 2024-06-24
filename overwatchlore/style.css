@@ -1,0 +1,325 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #4D2384;
+  --white: #ffffff;
+  --bg: #f5f5f5;
+}
+*/
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+.achtergrond {
+  background: linear-gradient(264deg, rgba(0, 0, 0, 0)32%, rgba(0, 0, 0, 1)), url(img/bg-kiri.png);
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #23213b;
+}
+
+
+
+.main-width  {
+  max-width: 90%;
+  width: 1400px;
+  margin: 0 auto;
+  scroll-snap-type: x mandatory; /* Enable scroll snapping horizontally */
+
+}
+
+.overwatch-navbar {
+  position: fixed; /* Add this line to make the navbar fixed */
+  top: 0; /* Stick it to the top of the viewport */
+  left: 0; /* Stick it to the left of the viewport */
+  background-color: #fff;
+  color: #f99c00;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px 10px; /* Adjusted padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+
+
+
+.navbar-toggler {
+  border: none;
+  font-size: 1rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.offcanvas-header img {
+  width: 180px;
+  padding: 1px;
+}
+
+
+.navbar-logo img {
+  width: 80px; /* Adjusted logo width */
+  border-radius: 50%;
+  padding: 1px;
+}
+
+
+
+.nav-link,
+.dropdown-item {
+  color: #575656;
+  font-weight: 00;
+  position: relative;
+}
+
+.nav-link:hover,
+.dropdown-item:hover,
+.nav-link.active {
+  color: #05e6f2;
+}
+
+@media (min-width: 992px) {
+  .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      background-color: #05e6f2;
+      height: 2px;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+  }
+
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+      width: 100%;
+      visibility: visible;
+  }
+}
+
+
+.logos img{
+  width: 60px;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(bigNoodle.ttf);
+}
+
+
+
+
+.content {
+  padding-top: 60px;
+  scroll-snap-align: start; /* Snap each content section to the start of the container */
+  
+}
+
+.content .main-text {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 50px;
+  
+
+}
+
+.content .main-text h2 {
+  font-family: myFont;
+  line-height: 1;
+  color: #05e6f2;
+  margin-bottom: 10px;
+}
+
+.content .main-text h1 {
+  font-family: myFont;
+  font-size: 90px;
+  line-height: 1;
+  color: #fff;
+  margin: 0px 0px 20px;
+}
+
+.content .main-text p {
+  max-width: 100%;
+  width: 700px;
+  color: #fff;
+  line-height: 1.8;
+  font-size: 25px;
+  margin-bottom: 340px;
+}
+
+
+/*
+.image {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  bottom: 10px;
+  right: -50px;
+  text-align: right;
+}
+
+.image img {
+  height: 100%;
+  object-fit: cover;
+}
+*/
+
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+#myVideo {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.card-img {
+  object-fit: cover;
+  height: 100px; /* Adjust the height of the banner */
+}
+
+.card-img-top {
+  right: -50px;
+}
+
+
+
+.card-text{
+color: #000000;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+
+
+/*swiper*/
+
+.item{
+  border-radius: 15px;
+  width:210px;
+  height:365px;
+  background-image: linear-gradient(to top, #ffffff, #ECECF2);
+  overflow: hidden;
+  transition: 0.5s;
+  margin:10px;
+  scroll-snap-align: start;
+}
+.item .avatar{
+  display: block;
+  margin:10px auto 2px;
+  width:180px;
+  height:150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px #7e878d;
+}
+.item .content{
+  padding:10px;
+  font-size: 26px;
+  font-family: myFont;
+}
+.item .content table td{
+  padding:10px 0;
+  border-bottom: 1px solid #AEC0CE;
+}
+.item .content table td:nth-child(2){
+  text-align: right;
+}
+.item .nameGroup{
+  text-align: center;
+  border-bottom:none!important;
+}
+#list{
+  display: flex;
+  width:max-content;
+}
+#formList{
+  width:1220px;
+  max-width: 100%;
+  overflow: auto;
+  margin:18px 10px;
+  scroll-behavior: smooth;
+  scroll-snap-type: both;
+}
+#formList::-webkit-scrollbar{
+  display: none;
+}
+@media screen and (min-width: 992px){
+  .item{
+      width: calc(33.3vw - 20px);
+  }
+  
+}
+
+
+
+.list-title {
+  font-family: myFont;
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  margin-top: 80px;
+}
+
+.footer {
+  background-color: #23213b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
