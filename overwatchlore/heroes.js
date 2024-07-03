@@ -1,54 +1,35 @@
-fetch("https://overfast-api.tekrop.fr/heroes?locale=en-us")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        const heroCardsContainer = document.getElementById('heroCards');
-        const heroSearchInput = document.getElementById('heroSearch');
+let heroesData = [];
 
-        const filterHeroes = () => {
-            const searchTerm = heroSearchInput.value.toLowerCase();
-            const filteredHeroes = data.filter(hero => hero.name.toLowerCase().includes(searchTerm));
+fetch('https://overfast-api.tekrop.fr/heroes')
+  .then(response => response.json())
+  .then(data => {
+    console.log("data has been fetched:", data);
+    heroesData = data; 
+    displayHeroes(heroesData); 
+  })
+  .catch(error => console.error('Error fetching data:', error));
 
-            heroCardsContainer.innerHTML = '';
 
-            filteredHeroes.forEach(hero => {
-                const card = document.createElement('div');
-                card.classList.add('hero-card');
-                card.classList.add('col-md-4');
-                card.classList.add('card-wrapper'); // Add class for consistent sizing
+function displayHeroes(data) {
+  const container = document.getElementById('heroes-container');
+  container.innerHTML = ''; 
 
-                const portraitImg = document.createElement('img');
-                portraitImg.src = hero.portrait;
-                portraitImg.alt = hero.name + " portrait";
-                portraitImg.classList.add('hero-portrait');
+  data.forEach(hero => {
+    console.log("hero:", hero);
+    const card = document.createElement('div');
+    card.className = 'hero-card';
+    card.innerHTML = `
+      <img src="${hero.portrait}" alt="Portrait of ${hero.name}" style="width:100px;height:auto;">
+      <h2>${hero.name}</h2>
+      <p><strong>Role:</strong> ${hero.role}</p>
+    `;
+    container.appendChild(card);
+  });
+}
 
-                const heroInfo = document.createElement('div');
-                heroInfo.classList.add('hero-info');
 
-                const heroName = document.createElement('h2');
-                heroName.textContent = hero.name;
-
-                const heroRole = document.createElement('p');
-                heroRole.textContent = "Role: " + hero.role;
-
-                heroInfo.appendChild(heroName);
-                heroInfo.appendChild(heroRole);
-
-                card.appendChild(portraitImg);
-                card.appendChild(heroInfo);
-
-                heroCardsContainer.appendChild(card);
-            });
-        };
-
-        heroSearchInput.addEventListener('input', filterHeroes);
-
-        filterHeroes();
-    })
-    .catch(error => {
-        console.error('There was a problem fetching the data:', error);
-    });
+document.getElementById('heroSearch').addEventListener('input', function() {
+  const searchText = this.value.toLowerCase();
+  const filteredHeroes = heroesData.filter(hero => hero.name.toLowerCase().includes(searchText));
+  displayHeroes(filteredHeroes); 
+});
