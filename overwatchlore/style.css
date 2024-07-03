@@ -175,6 +175,7 @@
 }
 
 
+
 /*
 .image {
   position: absolute;
@@ -192,12 +193,9 @@
 */
 
 
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
+/* Video Section */
+.col-md-6 {
+  position: relative;
 }
 
 #myVideo {
@@ -205,12 +203,40 @@
   height: auto;
 }
 
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  z-index: 10;
+}
+
+.play-button svg {
+  fill: #ffffff;
+}
+
+#playButton.hidden {
+  display: none;
+}
+
+
+
+
+
+/* Card Section */
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 .card-img {
   object-fit: cover;
@@ -221,8 +247,6 @@
   right: -50px;
 }
 
-
-
 .card-text{
 color: #000000;
 }
@@ -232,6 +256,30 @@ color: #000000;
   border: none !important;
 }
 
+/*popular cards*/
+
+h5.card-title, a.btn {
+font-family: myFont;
+}
+
+.card-img-top {
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+}
+
+.characters .card {
+  margin: 10px; 
+  
+  width: 250px; 
+}
+
+.characters .card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 
 /*swiper*/
