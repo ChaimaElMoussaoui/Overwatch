@@ -166,3 +166,7 @@ div#heroes-container {
   border-radius: 8px;
   background-color: #fff;
 }
+
+.hero-card:hover {
+  transform: scale(1.05); /* Scale the card on hover */
+}
