@@ -9,24 +9,21 @@ fetch('https://overfast-api.tekrop.fr/heroes')
   })
   .catch(error => console.error('Error fetching data:', error));
 
-
 function displayHeroes(data) {
   const container = document.getElementById('heroes-container');
   container.innerHTML = ''; 
 
   data.forEach(hero => {
-    console.log("hero:", hero);
     const card = document.createElement('div');
     card.className = 'hero-card';
     card.innerHTML = `
       <img src="${hero.portrait}" alt="Portrait of ${hero.name}" style="width:100px;height:auto;">
-      <h2>${hero.name}</h2>
+      <h2><a href="heroDetail.html?name=${encodeURIComponent(hero.name)}">${hero.name}</a></h2>
       <p><strong>Role:</strong> ${hero.role}</p>
     `;
     container.appendChild(card);
   });
 }
-
 
 document.getElementById('heroSearch').addEventListener('input', function() {
   const searchText = this.value.toLowerCase();
