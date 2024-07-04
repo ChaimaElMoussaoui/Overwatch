@@ -16,15 +16,20 @@ fetch('https://overfast-api.tekrop.fr/heroes')
     data.forEach(hero => {
       const card = document.createElement('div');
       card.className = 'hero-card';
+    
+      card.style.display = 'flex';
+      card.style.flexDirection = 'column';
+      card.style.alignItems = 'center';
+      card.style.justifyContent = 'center';
+      card.style.padding = '20px';
       card.innerHTML = `
-        <img src="${hero.portrait}" alt="Portrait of ${hero.name}" style="width:100px;height:auto;">
-        <h2 style="color: black; opacity: 0.75;">${hero.name}</h2>
-        <p><strong>Role:</strong> ${hero.role}</p>
+        <img src="${hero.portrait}" alt="Portrait of ${hero.name}" style="width:100px;height:auto; margin: 0 auto;">
+        <h2 style="color: #05e6f2; font-family: myFont; opacity: 0.75;">${hero.name}</h2>
+        <p style="color: white;"><strong>Role:</strong> ${hero.role}</p>
       `;
       container.appendChild(card);
     });
   }
-
 document.getElementById('heroSearch').addEventListener('input', function() {
   const searchText = this.value.toLowerCase();
   const filteredHeroes = heroesData.filter(hero => hero.name.toLowerCase().includes(searchText));

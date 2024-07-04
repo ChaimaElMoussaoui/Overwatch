@@ -4,11 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 .achtergrond {
-
   position: relative;
   height: 100vh;
   width: 100%;
@@ -19,40 +17,27 @@
 
 }
 
-
-
 .main-width {
   max-width: 95%;
   width: 1400px;
   margin: 0 auto;
   scroll-snap-type: x mandatory;
-  /* Enable scroll snapping horizontally */
-
 }
-
 
 .overwatch-navbar {
   position: fixed;
-  /* Add this line to make the navbar fixed */
   top: 0;
-  /* Stick it to the top of the viewport */
   left: 0;
-  /* Stick it to the left of the viewport */
   background-color: #fff;
   color: #f99c00;
   margin: 10px;
   border-radius: 5px;
   padding: 5px 10px;
-  /* Adjusted padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  /* Ensure it appears above other content */
 }
-
-
-
 
 .navbar-toggler {
   border: none;
@@ -70,15 +55,11 @@
   padding: 1px;
 }
 
-
 .navbar-logo img {
   width: 80px;
-  /* Adjusted logo width */
   border-radius: 50%;
   padding: 1px;
 }
-
-
 
 .nav-link,
 .dropdown-item {
@@ -86,14 +67,6 @@
   font-weight: 00;
   position: relative;
 }
-
-/*
-.nav-link:hover,
-.dropdown-item:hover,
-.nav-link.active {
-
-}
-*/
 
 @media (min-width: 991px) {
   .nav-link::before {
@@ -109,14 +82,12 @@
     transition: 0.3s ease-in-out;
   }
 
-
   .nav-link:hover::before,
   .nav-link.active::before {
     width: 100%;
     visibility: visible;
   }
 }
-
 
 .logos img {
   width: 60px;
@@ -127,7 +98,6 @@
   src: url(bigNoodle.ttf);
 }
 
-
 a.btn {
   font-family: myFont;
   font-size: 20px;
@@ -136,7 +106,6 @@ a.btn {
 .heroSearch {
   text-align: center;
   margin-bottom: 20px;
- 
 }
 
 div#heroes-container {
@@ -149,13 +118,11 @@ div#heroes-container {
 
 .heroes-container section {
   margin-bottom: 40px;
- 
 }
 
 .heroes-container h2 {
   margin-bottom: 20px;
   color: #333;
-  /* Adjust title color */
 }
 
 .hero-card {
@@ -164,9 +131,9 @@ div#heroes-container {
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  background-color: #fff;
+  background-color: #000001;
 }
 
 .hero-card:hover {
-  transform: scale(1.05); /* Scale the card on hover */
+  transform: scale(1.05);
 }
